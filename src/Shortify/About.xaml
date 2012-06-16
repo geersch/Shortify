@@ -1,0 +1,38 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Shortify.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FF5DADF5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="SHORTIFY" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Height="30" HorizontalAlignment="Center" Margin="0,42,0,0" Name="textBlock1" Text="For Windows Phone 7.5" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Center" Margin="0,78,0,0" Name="textBlock2" Text="Version 1.0" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Center" Margin="0,140,0,0" Name="textBlock3" Text="Questions and suggestions" VerticalAlignment="Top" />
+            <HyperlinkButton Content="geersch@gmail.com" Height="30" HorizontalAlignment="Center" Margin="0,176,0,0" Name="hyperlinkButton1" VerticalAlignment="Top" Width="241" Click="Email_Click" />
+            <TextBlock Height="30" HorizontalAlignment="Center" Margin="146,660,135,0" Name="textBlock4" Text="© Christophe Geers" VerticalAlignment="Top" />
+            <HyperlinkButton Content="http://cgeers.com" Height="30" HorizontalAlignment="Center" Margin="108,212,107,0" Name="hyperlinkButton2" VerticalAlignment="Top" Width="241" Click="Site_Click" />
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>
